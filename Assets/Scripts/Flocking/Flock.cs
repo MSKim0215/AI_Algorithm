@@ -57,16 +57,14 @@ public class Flock : MonoBehaviour
         foreach(FlockAgent agent in agents)
         {
             List<Transform> context = GetNearbyObjects(agent);
-            agent.GetComponentInChildren<SpriteRenderer>().color = Color.Lerp(Color.white, Color.red, context.Count / 6f);
+            Vector2 move = behavior.CalculateMove(agent, context, this);
+            move *= driveFactor;
 
-            //Vector2 move = behavior.CalculateMove(agent, context, this);
-            //move *= driveFactor;
-
-            //if(move.sqrMagnitude > squareMaxSpeed)
-            //{
-            //    move = move.normalized * maxSpeed;
-            //}
-            //agent.Move(move);
+            if (move.sqrMagnitude > squareMaxSpeed)
+            {
+                move = move.normalized * maxSpeed;
+            }
+            agent.Move(move);
         }
     }
 
