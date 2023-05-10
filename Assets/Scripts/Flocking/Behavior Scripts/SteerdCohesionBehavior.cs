@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behavior/Steerd Cohesion")]
-public class SteerdCohesionBehavior : FlockBehavior
+public class SteerdCohesionBehavior : FilteredFlockBehavior
 {
     private Vector2 currentVelocity;
 
@@ -15,7 +15,8 @@ public class SteerdCohesionBehavior : FlockBehavior
         if (_context.Count == 0) return Vector2.zero;
 
         Vector2 cohesionMove = Vector2.zero;
-        foreach (Transform item in _context)
+        List<Transform> filteredContext = (filter == null) ? _context : filter.Filter(_agent, _context);
+        foreach (Transform item in filteredContext)
         {
             cohesionMove += (Vector2)item.position;
         }

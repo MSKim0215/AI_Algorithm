@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3093310524303407569}
   - component: {fileID: 3093310524303407575}
   m_Layer: 0
-  m_Name: Flock Agent
+  m_Name: Flock Agent King
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,14 +113,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3350673536608434055, guid: f17f21325addd2144a8cbe65626e62d9, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -6301123504302266574, guid: 516bb5aab5b59014c91d49e06d1edf35, type: 3}
-    - target: {fileID: 3350673536608434072, guid: f17f21325addd2144a8cbe65626e62d9, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 710f181b7423309468ed587f3b0920a6, type: 2}
     - target: {fileID: 3350673536608434073, guid: f17f21325addd2144a8cbe65626e62d9, type: 3}
       propertyPath: m_Name
       value: Flock Agent Sprite

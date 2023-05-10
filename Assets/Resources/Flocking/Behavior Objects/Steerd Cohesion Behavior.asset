@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6059da4a10bae4c9e05ec3995c6a35, type: 3}
   m_Name: Steerd Cohesion Behavior
   m_EditorClassIdentifier: 
+  filter: {fileID: 11400000, guid: b5906f2a00b72d249a7501f8be890163, type: 2}
   agentSmoothTime: 0.5
